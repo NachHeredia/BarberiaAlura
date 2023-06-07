@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+header{
+    background-color: #BBBBBB;
+}
+
+.cajaNavegacion{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav a:hover{
+    color: rgb(224, 224, 75);
+    text-decoration: underline;
+}
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /* Esta función es para que ajuste el padding dentro del tamaño máximo que le dimos más arriba del 30% generando una caja donde lo que yo le indique lo realice dentro de esa caja y no sobre el tamaño completo de la página*/
+    border-color: #000000;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10%;
+}
+
+.productos li:hover{
+    border-color: rgb(224, 224, 75);
+}
+
+.productos li:active{
+    border-color: green;
+}
+
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.productos li:hover h2 {
+    font-size: 33px;
+}
+
+.producto-descripcion {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.copyright {
+    color: white;
+    font-size: 12px;
+    margin: 20px;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend { /*El label es el texto que se le otorga como título al cuadradito donde se coloca el texto/números*/ 
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{ /*El input es el cuadradito para completa con info*/
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+/*JERARQUÍA EN CSS para conocer que estilo aplicar es a través de jerarquia de etiqueta.
+Ejemplo:
+- INLINE: Este es el que se aplica la etiqueta "STYLE" en la estructura HTML.
+- ID Es el que sigue más pesado que tiene en cuenta CSS
+- CLASS: Le sigue al ID
+y por último tiene en cuenta las etqieutas por si solas:
+- ETIQUETA SOLA.
+Sin embargo lo que hace CSS es sumar el peso de los selectores que utilizo, por lo que se debe tener en cuenta que selectores se escriben en css para saber que estilos va a aplicarle al código.
+
+La etiqueta LEGEND se utiliza si o si dentro de la etiqueta FIELDSET que es para agrupar contenido de un mismo tema, esta etiqueta sirve para darle título a lo que haya dentro del contenido del fieldset*/
+
+.enviar {
+    width: 40%;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: chocolate;
+    border: none;
+    border-radius: 3px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    transform: scale(1.1);
+    background-color: rgb(167, 84, 26);
+}
+
+fieldset legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    font-weight: bold;
+}
+td, th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+
+@media screen and (max-width:480px){
+    nav {
+        position: static;
+    }
+    .cajaNavegacion, .productos, .copyright, .producto-descripcion, .producto-precio {
+        width: auto;
+    }
+    h2, p, img {
+        text-align: center;
+        width: auto;
+    }
+}
+
+
+/*A partir de acá inicia nuestro CSS parar nuestra home */
+
+#banner {
+    width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;
+    margin: 1em 0 1em;
+    clear: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.principal{
+    margin: 0 1em 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.principal em strong{
+    color: crimson;
+}
+
+.utensillos{
+    width: 200px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa{
+    padding: 3em 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(#FEFEFE,#BBBBBB) ;
+}
+
+.mapa p{
+    margin: 0 0 20px;
+    text-align: center;
+    
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    font-family: 'Montserrat', sans-serif;
+    padding: 3em 0;
+    background: #888888;
+    background: linear-gradient(#BBBBBB,#888888);
+}
+
+/* función -MARGIN- para CSS
+
+PRIMER NRO: Margen SUPERIOR
+SEGUNDO NRO: Margen DERECHO
+TERCER NRO: Margen INFERIOR
+CUARTO NRO: Margen IZQUIERDO 
+
+Siempre debe poner nros en sentido HORARIO */
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.cliente-diferenciales{
+    width: 54%;
+    margin: 0 19px;
+    transition: 400ms;
+    box-shadow: 10px 10px 20px #2e2d2d;
+}
+
+.cliente-diferenciales:hover{
+    opacity: 0.3;
+}
+
+.lista-diferenciales{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.item{
+    line-height: 2.2;
+}
+
+.item:before{
+    content: "💈";
+}
+
+.item:first-child{
+    font-weight: bold;
+}
+/* la funcion que utilice luego de la palabra ITEM, se llama una PSEUDO CLASS que sirve en este caso esta función para que se ponga en negrita la primera opción de la lista que tengo creada en HTML*/
+
+.video{
+    width: 50%;
+    margin: 3em auto 0;
+}
+
+@media screen and (max-width:480px){
+    h1  {
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+    .cajaNavegacion, .principal, .mapa-contenido, .contenido-diferenciales, .video {
+        width: auto;
+    }
+    .lista-diferenciales, .cliente-diferenciales{
+        width: 90%;
+    }
+}
